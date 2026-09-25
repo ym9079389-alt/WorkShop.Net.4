@@ -85,16 +85,38 @@ namespace WorkShop.Net._4
             #endregion
 
             #region Q4
+            //int[] arr = AddArray();
+
+            //reversOfArray(arr);
+
+            //int sum = SumOfArray(arr);
+
+            //int max = MaxOfArray(arr);
+
+            //Console.WriteLine(sum);
+            //Console.WriteLine(max);
+            #endregion
+
+            #region Q5
             int[] arr = AddArray();
 
-            reversOfArray(arr);
+            int size = arr.Length;
+            int position = 0;
+            for (int i = 0; i < size; i++)
+            {
+                if (arr[i] != 0)
+                {
+                    arr[position] = arr[i];
+                    position++;
+                }
+            }
 
-            int sum = SumOfArray(arr);
+            for (int i = position; i < size; i++)
+            {
+                arr[i] = 0;
+            }
 
-            int max = MaxOfArray(arr);
-
-            Console.WriteLine(sum);
-            Console.WriteLine(max);
+            PrintArray(arr);
             #endregion
 
         }
