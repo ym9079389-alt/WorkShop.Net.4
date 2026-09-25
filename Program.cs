@@ -71,12 +71,19 @@ namespace WorkShop.Net._4
             int Pointer = int.Parse(Console.ReadLine());
             int NumPo = int.Parse(Console.ReadLine());
 
-            for(int i = Pointer; i < Pointer + NumPo; i++)
+            if (Pointer >= arr.Length || NumPo+Pointer >= arr.Length || NumPo < Pointer)
             {
-                Console.Write($"{arr[i]}, ");
+                Console.WriteLine("invalid");
+                return;
             }
 
+            for(int i = Pointer; i < Pointer + NumPo; i++)
+                {
+                    Console.Write($"{arr[i]}, ");
+                }
+
             #endregion
+
 
         }
         #region Add Array
