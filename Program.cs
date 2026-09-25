@@ -64,7 +64,19 @@ namespace WorkShop.Net._4
             //}
             #endregion
 
-            
+            #region Q3
+            int[] arr = AddArray();
+
+            Console.Write("Enter a Start Pint & Number You Want Print: ");
+            int Pointer = int.Parse(Console.ReadLine());
+            int NumPo = int.Parse(Console.ReadLine());
+
+            for(int i = Pointer; i < Pointer + NumPo; i++)
+            {
+                Console.Write($"{arr[i]}, ");
+            }
+
+            #endregion
 
         }
         #region Add Array
