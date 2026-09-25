@@ -65,25 +65,37 @@ namespace WorkShop.Net._4
             #endregion
 
             #region Q3
-            int[] arr = AddArray();
+            //int[] arr = AddArray();
 
-            Console.Write("Enter a Start Pint & Number You Want Print: ");
-            int Pointer = int.Parse(Console.ReadLine());
-            int NumPo = int.Parse(Console.ReadLine());
+            //Console.Write("Enter a Start Pint & Number You Want Print: ");
+            //int Pointer = int.Parse(Console.ReadLine());
+            //int NumPo = int.Parse(Console.ReadLine());
 
-            if (Pointer >= arr.Length || NumPo+Pointer >= arr.Length || NumPo < Pointer)
-            {
-                Console.WriteLine("invalid");
-                return;
-            }
+            //if (Pointer >= arr.Length || NumPo+Pointer >= arr.Length || NumPo < Pointer)
+            //{
+            //    Console.WriteLine("invalid");
+            //    return;
+            //}
 
-            for(int i = Pointer; i < Pointer + NumPo; i++)
-                {
-                    Console.Write($"{arr[i]}, ");
-                }
+            //for(int i = Pointer; i < Pointer + NumPo; i++)
+            //    {
+            //        Console.Write($"{arr[i]}, ");
+            //    }
 
             #endregion
 
+            #region Q4
+            int[] arr = AddArray();
+
+            reversOfArray(arr);
+
+            int sum = SumOfArray(arr);
+
+            int max = MaxOfArray(arr);
+
+            Console.WriteLine(sum);
+            Console.WriteLine(max);
+            #endregion
 
         }
         #region Add Array
@@ -137,6 +149,56 @@ namespace WorkShop.Net._4
             }
 
         }
+
+
+        #endregion
+
+        #region Sum Of Array
+        public static int SumOfArray(int[] arr)
+        {
+            int sum = 0;
+            for(int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i];
+            }
+            return sum;
+        }
+        #endregion
+
+        #region Max Of Array
+        public static int MaxOfArray(int[] arr)
+        {
+            int max = arr[0];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if(max < arr[i])
+                {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+
+
+
+        #endregion
+
+        #region Revers Of Array
+        public static void reversOfArray(int[] arr)
+        {
+            int[] revers = new int[arr.Length];
+            int j = 0;
+            for (int i = arr.Length - 1; i >= 0; i--)
+            {
+                revers[j] = arr[i];
+                j++;
+            }
+            for (int i = 0; i < arr.Length; i++)
+            {
+                 Console.WriteLine(revers[i]);
+            }
+        }
+
 
 
         #endregion
