@@ -98,25 +98,37 @@ namespace WorkShop.Net._4
             #endregion
 
             #region Q5
-            int[] arr = AddArray();
+            //int[] arr = AddArray();
 
-            int size = arr.Length;
-            int position = 0;
-            for (int i = 0; i < size; i++)
-            {
-                if (arr[i] != 0)
-                {
-                    arr[position] = arr[i];
-                    position++;
-                }
-            }
+            //int size = arr.Length;
+            //int position = 0;
+            //for (int i = 0; i < size; i++)
+            //{
+            //    if (arr[i] != 0)
+            //    {
+            //        arr[position] = arr[i];
+            //        position++;
+            //    }
+            //}
 
-            for (int i = position; i < size; i++)
-            {
-                arr[i] = 0;
-            }
+            //for (int i = position; i < size; i++)
+            //{
+            //    arr[i] = 0;
+            //}
 
-            PrintArray(arr);
+            //PrintArray(arr);
+            #endregion
+
+            #region MyStack
+            MyStack<int> stack01 = new MyStack<int>(5);
+
+            stack01.Push(5);
+            stack01.Push(7);
+            stack01.Push(9);
+
+            Console.WriteLine(stack01.Pop());
+            Console.WriteLine(stack01.Beak());
+            Console.WriteLine(stack01.count);
             #endregion
 
         }
